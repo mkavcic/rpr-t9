@@ -1,4 +1,4 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.tutorijal09;
 
 import java.util.ArrayList;
 import java.util.Scanner;
