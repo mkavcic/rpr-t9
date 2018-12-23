@@ -6,6 +6,17 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void glavniGrad(){
+        System.out.println("Unesite naziv drzave: ");
+        Scanner ulaz= new Scanner(System.in);
+        String drzava=ulaz.nextLine();
+        Grad glGrad=GeografijaDAO.getInstance().glavniGrad(drzava);
+        if(glGrad!=null){
+            System.out.println("Glavni grad drzave"+drzava+"je"+ glGrad.getNaziv());
+        }
+        else System.out.println("Drzava ne postoji");
+    }
+
     public static String ispisiGradove(){
         String g="";
         ArrayList<Grad> gradovi=GeografijaDAO.getInstance().gradovi();

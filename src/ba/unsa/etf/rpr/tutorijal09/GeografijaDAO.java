@@ -46,7 +46,12 @@ public class GeografijaDAO {
         return c;
     }
 
-    void glavniGrad(){
-
+    public Grad glavniGrad(String drzava){
+        for(var x: drzave){
+            if(x.getNaziv().equals(drzava)) return x.getGlavniGrad();
+        }
+        return null;
     }
+
+
 }
