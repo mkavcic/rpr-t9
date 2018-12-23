@@ -83,7 +83,7 @@ public class GeografijaDAO {
     }
 
     void dodajGrad(Grad grad){
-
+        gradovi.add(grad);
     }
 
     void dodajDrzavu(Drzava drzava){
