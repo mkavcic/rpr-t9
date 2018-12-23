@@ -87,7 +87,7 @@ public class GeografijaDAO {
     }
 
     void dodajDrzavu(Drzava drzava){
-
+        drzave.add(drzava);
     }
 
     void izmijeniGrad(Grad grad){
