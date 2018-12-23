@@ -71,7 +71,11 @@ public class GeografijaDAO {
         return g;
     }
 
-    void obrisiDrzavu(String drzava){}
+    public void obrisiDrzavu(String drzava){
+        for(var x: drzave){
+            if(x.getNaziv().equals(drzava)) drzave.remove(x);
+        }
+    }
 
     ArrayList<Grad> gradovi(){
         ArrayList<Grad> a=new ArrayList<>();
