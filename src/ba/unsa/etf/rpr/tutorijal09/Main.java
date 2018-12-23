@@ -6,7 +6,14 @@ import java.util.Scanner;
 
 public class Main {
 
-
+    public static String ispisiGradove(){
+        String g="";
+        ArrayList<Grad> gradovi=GeografijaDAO.getInstance().gradovi();
+        for(var x: gradovi){
+            g+=x.getNaziv()+" ("+x.getDrzava().toString()+")"+x.getBrojStanovnika();
+        }
+        return g;
+    }
 
     public static void createNewTable(){  // source : http://www.sqlitetutorial.net/sqlite-java/create-table/
         String url="jdbc:sqlite:C://sqlite/db/baza.db";
