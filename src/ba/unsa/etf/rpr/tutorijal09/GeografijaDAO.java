@@ -91,7 +91,15 @@ public class GeografijaDAO {
     }
 
     void izmijeniGrad(Grad grad){
-
+        try{
+            stmt1=conn.prepareStatement("UPDATE main.drzava SET main.dzava.naziv=?, main.drzava.glavniGrad=?, main.drzava.brojStanovnika=?");
+            stmt1.setInt(1, grad.getId());
+            stmt1.setString(2, grad.getNaziv());
+            stmt1.setInt(3, grad.getBrojStanovnika());
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     Drzava nadjiDrzavu(){
