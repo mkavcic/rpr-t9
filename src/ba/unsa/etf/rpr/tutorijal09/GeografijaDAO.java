@@ -104,6 +104,9 @@ public class GeografijaDAO {
 
     Drzava nadjiDrzavu(){
         Drzava d=new Drzava();
+        for(var x: drzave){
+            if(x.getNaziv().equals(x)) d=x;
+        }
         return d;
     }
 
